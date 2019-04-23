@@ -3,7 +3,7 @@
 ; Title: donner-exercise-1.3.js
 ; Author: Adam Donner
 ; Date: 19 April 2019
-; Description:
+; Description: Parses a URL and outputs the results
 ;===========================================
 */
 
@@ -15,7 +15,7 @@
  <Today's Date>
 
  https:
- www.example.com
+ www.twinlabworks.com
  name=smith
 
 */
@@ -26,10 +26,13 @@ const header = require('../donner-header.js');
 console.log(header.display("Adam", "Donner", "Exercise 1.3"));
 console.log("") // Line break
 
+// This will requires a url modules and adds a url variable.
 var url = require('url')
 
-var parsedURL = url.parse('https://www.example.com/profile?name=smith');
+// This parses the URL object.
+var parsedURL = url.parse('https://www.twinlabworks.com/profile?name=smith');
 
+// This outputs the parsed results of the url.
 console.log(parsedURL.protocol);
 console.log(parsedURL.host);
 console.log(parsedURL.query);
