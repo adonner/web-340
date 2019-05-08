@@ -11,7 +11,7 @@
 
 
 const header = require('../../donner-header.js');
-console.log(header.display("Adam", "Donner", "Exercise 2.3"));
+console.log(header.display("Adam", "Donner", "Exercise 3.2"));
 console.log("") // Line break
 
 // This requires http and express, and morgan.

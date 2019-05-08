@@ -1,9 +1,9 @@
 /*
 ============================================
-; Title: donner-exercise-3.2.js
+; Title: donner-assignment-3.4.js
 ; Author: Adam Donner
 ; Date: 7 May 2019
-; Description:  Morgan logging.
+; Description:  Creates a simple web application.
 ;===========================================
 */
 
@@ -11,7 +11,7 @@
 
 
 const header = require('../../donner-header.js');
-console.log(header.display("Adam", "Donner", "Exercise 2.3"));
+console.log(header.display("Adam", "Donner", "Assignment 3.4"));
 console.log("") // Line break
 
 // Sets view and view engine and logger
