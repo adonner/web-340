@@ -37,7 +37,7 @@ app.post("/", function(request, response) {
   response.send("Invoked a POST request.");
 });
 
-// Outputs a message for the post response
+// Outputs a message for the delete response
 app.delete("/", function(request, response) {
 
   response.send("Invoked a DELETE request.");
