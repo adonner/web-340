@@ -40,6 +40,6 @@ app.get("/:productId", function(req,res){
 });
 
 //  This creates the server.
-http.createServer(app).listen(3001, function() {
-  console.log("Application started and listening on port %s", 3001);
+http.createServer(app).listen(3000, function() {
+  console.log("Application started and listening on port %s", 3000);
 });

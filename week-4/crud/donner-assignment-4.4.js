@@ -10,7 +10,7 @@
 
 
 const header = require('../../donner-header.js');
-console.log(header.display("Adam", "Donner", "Exercise 4.4"));
+console.log(header.display("Adam", "Donner", "Assignment 4.4"));
 console.log("") // Line break
 
 
