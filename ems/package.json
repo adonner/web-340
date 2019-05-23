@@ -1,0 +1,10 @@
+{
+  "name": "ems",
+  "author": "Adam Donner",
+  "private": true,
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.0",
+    "morgan": "^1.9.1"
+  }
+}
