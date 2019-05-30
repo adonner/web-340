@@ -4,7 +4,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  color: #222;
+  color: #141301;
 }
 
 /* Navigation Section */
@@ -17,6 +17,9 @@ html, body {
   font-size: 1.2rem !important;
 }
 
+.bg-light {
+  background-color: #FFFAFA !important;
+}
 
 /* Hero Image and text */
 .hero-image img {
@@ -31,24 +34,26 @@ html, body {
 }
 
 .carousel-caption h1 {
-  color: white;
-  font-size: 400%;
+  color: #FF0022;
+  font-size: 350%;
   text-shadow: 1px 1px 15px #000;
 }
 
-#adam {
-  color: #ffb511;
+.carousel-caption h2 {
+  color: #41EAD4;
+  font-size: 200%;
+  text-shadow: 1px 1px 15px #000;
 }
 
 /* Button formatting */
 .btn-primary {
-  background-color: #4f6d7a;
-  border: 1px solid #4f6d7a;
+  background-color: #465362;
+  border: none;
 }
 
 .btn-primary:hover {
-  background-color: #4f6d7a;
-  border: 1px solid #4f6d7a;
+  background-color: #465362;
+  border: none;
 }
 
 .jumbotron {
@@ -62,97 +67,26 @@ html, body {
 
 /* Footer Section */
 footer {
-  background-color: #cccccc;
-  color: #003366;
+  background-color: #FFFAFA;
+  color: #222;
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 hr.footer {
   border-top: 8px solid #003366;
-  width: 15%;
+  width: 75%;
   margin-top: 1rem;
 }
 
 footer a {
-  color: #4f6d7a;
+  color: #011627;
 }
 
 footer a:hover {
-  color: #4f6d7a;
+  color: #011627;
 }
 
-form {
-  margin: 0 auto;
-}
-
-/* Formats social icons */
-.social {
-  font-size: 2rem;
-  padding-right: 10px;
-}
-
-/*---Media Queries --*/
-@media (max-width: 768px) {
-  .carousel-caption {
-    top: 45%;
-  }
-
-  .carousel-caption h1 {
-    font-size: 350%;
-    text-transform: uppercase;
-
-  }
-
-   .carousel-caption .btn {
-     font-size: 95%;
-     padding: 8px 14px;
-   }
-
-   .display-4 {
-     font-size: 200%
-   }
-}
-
-@media (max-width: 576px) {
-  .carousel-caption {
-    top: 40%;
-  }
-
-  .carousel-caption h1 {
-    font-size: 250%;
-    text-transform: uppercase;
-
-  }
-
-  .toggle{
-    display: block;
-  }
-
-  ul {
-    width: 100%;
-    display: none !important;
-  }
-
-  ul li {
-    display: block !important;
-    text-align: center;
-  }
-
-  .active {
-    display: block !important;
-  }
-
-   .carousel-caption .btn {
-     font-size: 90%;
-     padding: 4px 8px;
-   }
-
-   .display-4 {
-    font-size: 160%
-  }
-
-}
 
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {

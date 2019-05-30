@@ -1,3 +1,12 @@
+<!--
+============================================
+; Title: index.ejs
+; Author: Adam Donner
+; Date: 29 May 2019
+; Description: index of EMS program.
+;===========================================
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <% include header %>
@@ -5,18 +14,23 @@
 <body>
 <% include navbar %>
 
-<div class="hero-image" id="home">
-  <img src="img/background.jpg" alt="open apple laptop">
+<div class="hero-image carousel" id="home">
+  <img src="img/background.jpg" alt="people in circle with fists together">
   <div class="carousel-caption">
-      <h1 class="display-2">Hello, I'm <span id="adam">Adam Donner</span></h1>
-      <h1 class="display-2" id="text"></h1> <!--Div for the typerwriter text-->
-      <br>
-
-      <a href="docs/Resume-AdamDonner.pdf" class="btn btn-primary btn-lg">Resume</a>
+      <h1 class="display-2">Welcome to the Employee Management System</h1>
+      <h1 class="display-2" id="text"></h1>
+      <h2 class="display-3">Today is: <span id="datetime"></span></h2>
   </div>
 </div>
 
 
+<% include footer %>
 <% include scripts %>
+
+
+<script>
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+  </script>
 </body>
 </html>
