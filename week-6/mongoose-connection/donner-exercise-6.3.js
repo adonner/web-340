@@ -21,17 +21,20 @@ var mongoose =require("mongoose")
 // App functions
 var app = express();
 
-
+// Link to my database
 var mongoDB = "mongodb+srv://admin:Two2Twins@buwebdev-cluster-1-6mue2.mongodb.net/test?retryWrites=true";
 
+// Call to connect.
 mongoose.connect(mongoDB, {
 });
 
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 
+// On error output error message.
 db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 
+// On success output message.
 db.once('open', function () {
   console.log('Application connected to mLab');
 })
