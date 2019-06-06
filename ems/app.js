@@ -11,7 +11,7 @@
 
 
 const header = require('../donner-header.js');
-console.log(header.display("Adam", "Donner", "Assignment 5.4"));
+console.log(header.display("Adam", "Donner", "EMS Project"));
 console.log("") // Line break
 
 // Sets required statements
