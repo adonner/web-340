@@ -25,6 +25,8 @@ var mongoose =require("mongoose")
 
 var Employee = require("./models/employee");
 
+var app = express();
+
 // Link to my database
 var mongoDB = "mongodb+srv://admin:Two2Twins@buwebdev-cluster-1-6mue2.mongodb.net/test?retryWrites=true";
 
@@ -42,9 +44,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error: '));
 db.once('open', function () {
   console.log('Application connected to mLab');
 })
-
-
-var app = express();
 
 
 // Instructs express to look inside of the views folder for files.
