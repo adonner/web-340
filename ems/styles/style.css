@@ -18,7 +18,7 @@ html, body {
 }
 
 .bg-light {
-  background-color: #FFFAFA !important;
+  background-color: #EEF4F4 !important;
 }
 
 /* Hero Image and text */
@@ -67,7 +67,7 @@ html, body {
 
 /* Footer Section */
 footer {
-  background-color: #FFFAFA;
+  background-color: #FFFCF9  ;
   color: #222;
   padding-top: 1rem;
   padding-bottom: 1rem;
