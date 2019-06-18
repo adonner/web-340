@@ -13,11 +13,20 @@
 
   <body>
     <% include navbar %>
-
-    <div role="main" class="container" style="width: 50%;">
-      <br /><br />
-
-    </div>
+    <div role="main" class="container col-md-4">
+      <br><br>
+      <h2><%= title %></h2>
+      <div class="form-group">
+        <label for="txtFirstName">First name</label>
+        <input type="text" name="txtFirstName" class="form-control" readonly value="<%= employee[0].firstName %>">
+      </div>
+      <div class="form-group">
+        <label for="txtLastName">Last name</label>
+        <input type="text" name="txtLastName" class="form-control" readonly value="<%= employee[0].lastName %>">
+      </div>
+      <p class="float-right">
+        <a href="/">Ok</a>
+      </p>
 
     <% include scripts %>
   </body>

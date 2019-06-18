@@ -149,11 +149,27 @@ app.post('/process', function(req, res) {
 });
 
 // This renders the view page.
-app.get("/view", function(request, response) {
-  response.render("view", {
-    title: "View Employee",
-    page: "view",
-  });
+app.get('/view/:queryName', function(request, response) {
+  var queryName = request.params['queryName'];
+
+  Employee.find({_id: queryName}, function(err, employees) {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log(employees);
+
+      if (employees.length > 0) {
+        response.render('view', {
+          title: 'EMS | View',
+          employee: employees
+        })
+      }
+      else {
+        response.redirect('/list')
+      }
+    }
+  })
 });
 
 // Creates a new Node.js server and listens on port 8080.
