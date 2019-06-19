@@ -10,10 +10,6 @@
 // start program
 
 
-const header = require('../donner-header.js');
-console.log(header.display("Adam", "Donner", "EMS Project"));
-console.log("") // Line break
-
 // Sets required statements
 
 var express = require("express");
@@ -138,10 +134,12 @@ app.post('/process', function(req, res) {
 
   // Save employee data to database.
   employee.save(function(err) {
+    // If an error, throw an error.
     if (err) {
       console.log(err);
       throw err;
     } else {
+      // Output the first and last name to the console and redirect to index.
       console.log(firstName + " " + lastName + ' saved successfully!');
       res.redirect('/');
     }
@@ -151,14 +149,16 @@ app.post('/process', function(req, res) {
 // This renders the view page.
 app.get('/view/:queryName', function(request, response) {
   var queryName = request.params['queryName'];
-
+  // This finds the employee based on the database id
   Employee.find({_id: queryName}, function(err, employees) {
+    // If error, throw error.
     if (err) {
       console.log(err);
     }
     else {
+      // Console the employee first and last name.
       console.log(employees);
-
+      // Render the employee data.
       if (employees.length > 0) {
         response.render('view', {
           title: 'EMS | View',
@@ -176,5 +176,5 @@ app.get('/view/:queryName', function(request, response) {
 app.set('port', process.env.PORT || 8080);
 // Creates a new Node.js server and listens on port 8080.
 http.createServer(app).listen(app.get('port'), function() {
-  console.log("Application started on port 8080" + app.get('port'));
+  console.log("Application started on port" + app.get('port'));
 });
